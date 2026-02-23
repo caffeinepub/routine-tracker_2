@@ -1,0 +1,175 @@
+{
+  "kind": "build_request",
+  "title": "Create daily routine tracking app with AI assistant",
+  "projectName": "Routine Tracker",
+  "priority": "normal",
+  "requirements": [
+    {
+      "id": "REQ-1",
+      "text": "Create a backend data model to store daily routines with fields for routine name, description, scheduled time, completion status, and timestamp",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "Create a app to track my daily routine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Backend can create new routine entries",
+        "Backend can retrieve all routines for a user",
+        "Backend can update routine completion status",
+        "Backend can delete routines"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "text": "Implement frontend UI to display a list of daily routines showing name, scheduled time, and completion status with the ability to mark routines as complete",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "track my daily routine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can view their list of daily routines",
+        "Users can check off completed routines",
+        "Completed routines are visually distinguished from incomplete ones",
+        "Routines are sorted by scheduled time"
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "text": "Create a form interface to add new routines with fields for routine name, description, and scheduled time",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "track my daily routine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can input routine name, description, and time",
+        "Form validates required fields before submission",
+        "Successfully added routines appear in the routine list",
+        "Form clears after successful submission"
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "text": "Implement an AI assistant chat interface where users can interact with an assistant to get help managing their routines",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "smart ai assistant to help"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Chat interface displays conversation history",
+        "Users can type and send messages to the assistant",
+        "Assistant responses are displayed in the chat",
+        "Chat is accessible from the main routine tracking view"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "text": "Create backend logic for the AI assistant to provide intelligent suggestions and reminders about daily routines based on user's routine data",
+      "target": "backend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "smart ai assistant to help"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Assistant can analyze user's routine patterns",
+        "Assistant can suggest optimal times for routines",
+        "Assistant can remind users about incomplete routines",
+        "Assistant responses are contextual to the user's routine data"
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "text": "Add ability to edit existing routines including name, description, and scheduled time",
+      "target": "both",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "track my daily routine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Users can select a routine to edit",
+        "Edit form pre-fills with existing routine data",
+        "Changes are saved to backend",
+        "Updated routine reflects changes in the list"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "text": "Implement a dashboard view showing daily progress statistics such as completion rate and streak tracking",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ],
+        "quotes": [
+          "track my daily routine"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Dashboard displays total routines for the day",
+        "Dashboard shows completion percentage",
+        "Dashboard tracks consecutive days of completion",
+        "Statistics update in real-time as routines are completed"
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "text": "Create a modern, cohesive visual design with a calm and productive aesthetic using warm earth tones and clean typography that promotes focus and routine building",
+      "target": "frontend",
+      "source": {
+        "messageIds": [
+          "msg-1"
+        ]
+      },
+      "acceptanceCriteria": [
+        "Design uses a consistent color palette throughout the app",
+        "Typography is clear and readable",
+        "Layout promotes ease of use and reduces cognitive load",
+        "Visual hierarchy guides users through their routine management tasks"
+      ]
+    }
+  ],
+  "constraints": [
+    "Backend must use single-actor Motoko architecture",
+    "Frontend must use React with TypeScript and Tailwind CSS",
+    "Do not modify immutable frontend paths including useInternetIdentity hooks and UI components"
+  ],
+  "nonGoals": [
+    "Integration with external calendar services",
+    "Mobile app development",
+    "Social sharing features",
+    "Integration with third-party AI services like OpenAI or Anthropic"
+  ],
+  "imageRequirements": {
+    "required": [
+      "Minimalist illustration of a morning routine checklist with warm earth tones (routine-hero.dim_1200x600.png)",
+      "Simple AI assistant avatar icon with friendly appearance (assistant-avatar.dim_128x128.png)"
+    ],
+    "edits": []
+  }
+}

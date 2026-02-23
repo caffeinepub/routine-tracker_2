@@ -1,0 +1,144 @@
+{
+  "kind": "implementation_plan",
+  "version": "1.0",
+  "title": "Daily Routine Tracking App with AI Assistant - Frontend Implementation",
+  "requirements": [
+    {
+      "id": "REQ-2",
+      "summary": "Display daily routines list with completion status and ability to mark complete",
+      "acceptanceCriteria": [
+        "Users can view their list of daily routines",
+        "Users can check off completed routines",
+        "Completed routines are visually distinguished from incomplete ones",
+        "Routines are sorted by scheduled time"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/RoutineList.tsx",
+          "operation": "create",
+          "description": "Create a component that fetches and displays all routines from backend using getAllRoutines(). Show routine name, scheduled time, and completion status. Implement checkbox interaction to mark routines complete via markRoutineCompleted(). Apply visual styling to distinguish completed vs incomplete routines. Sort routines by scheduledTime field."
+        },
+        {
+          "path": "frontend/src/hooks/useRoutines.ts",
+          "operation": "create",
+          "description": "Create a custom hook to manage routine state and backend interactions. Fetch routines using backend.getAllRoutines(), provide functions to mark complete via backend.markRoutineCompleted(), and handle loading/error states. Return sorted routine list and mutation functions."
+        }
+      ]
+    },
+    {
+      "id": "REQ-3",
+      "summary": "Create form to add new routines with validation",
+      "acceptanceCriteria": [
+        "Users can input routine name, description, and time",
+        "Form validates required fields before submission",
+        "Successfully added routines appear in the routine list",
+        "Form clears after successful submission"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AddRoutineForm.tsx",
+          "operation": "create",
+          "description": "Create a form component with inputs for routine name (required), description (optional), and scheduled time (required). Implement client-side validation for required fields. On submit, call backend.addRoutine() with form data. Clear form fields after successful submission. Display validation errors inline. Use Tailwind CSS for styling."
+        }
+      ]
+    },
+    {
+      "id": "REQ-4",
+      "summary": "Implement AI assistant chat interface for routine management help",
+      "acceptanceCriteria": [
+        "Chat interface displays conversation history",
+        "Users can type and send messages to the assistant",
+        "Assistant responses are displayed in the chat",
+        "Chat is accessible from the main routine tracking view"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/AIAssistant.tsx",
+          "operation": "create",
+          "description": "Create a chat interface component with message history display, text input field, and send button. Wire up to use the generated assistant avatar image at frontend/public/assets/generated/assistant-avatar.dim_128x128.png. Maintain conversation state locally. Include message bubbles for user and assistant with distinct styling. Make it accessible from the main view as a sidebar or modal."
+        },
+        {
+          "path": "frontend/src/hooks/useAIAssistant.ts",
+          "operation": "create",
+          "description": "Create a custom hook to manage AI assistant conversation state and backend communication for assistant responses. Handle message history, sending user messages, and receiving assistant responses. Integrate with backend AI capabilities when user sends messages."
+        }
+      ]
+    },
+    {
+      "id": "REQ-6",
+      "summary": "Add ability to edit existing routines",
+      "acceptanceCriteria": [
+        "Users can select a routine to edit",
+        "Edit form pre-fills with existing routine data",
+        "Changes are saved to backend",
+        "Updated routine reflects changes in the list"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/EditRoutineForm.tsx",
+          "operation": "create",
+          "description": "Create an edit form component similar to AddRoutineForm but pre-filled with existing routine data. Accept a routine ID or object as prop. Load routine data using backend.getRoutine() if needed. On submit, call backend.editRoutine() with updated fields. Close form and refresh routine list after successful save."
+        },
+        {
+          "path": "frontend/src/components/RoutineList.tsx",
+          "operation": "modify",
+          "description": "Add edit button or interaction to each routine item that opens the EditRoutineForm component. Pass selected routine data to the edit form. Handle edit mode state and form visibility."
+        }
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "summary": "Implement dashboard showing daily progress statistics",
+      "acceptanceCriteria": [
+        "Dashboard displays total routines for the day",
+        "Dashboard shows completion percentage",
+        "Dashboard tracks consecutive days of completion",
+        "Statistics update in real-time as routines are completed"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/components/Dashboard.tsx",
+          "operation": "create",
+          "description": "Create a dashboard component that displays daily statistics. Calculate and show total routines, completion percentage, and streak tracking. Use routine data from useRoutines hook. Update statistics reactively when routine completion status changes. Display metrics in cards or stat blocks with clear labels."
+        },
+        {
+          "path": "frontend/src/hooks/useRoutineStats.ts",
+          "operation": "create",
+          "description": "Create a custom hook to calculate routine statistics from routine data. Compute total routines, completed count, completion percentage, and consecutive day streak. Return computed stats that update when routine data changes."
+        }
+      ]
+    },
+    {
+      "id": "REQ-8",
+      "summary": "Apply modern cohesive design with warm earth tones and clean typography",
+      "acceptanceCriteria": [
+        "Design uses a consistent color palette throughout the app",
+        "Typography is clear and readable",
+        "Layout promotes ease of use and reduces cognitive load",
+        "Visual hierarchy guides users through their routine management tasks"
+      ],
+      "file_operations": [
+        {
+          "path": "frontend/src/index.css",
+          "operation": "modify",
+          "description": "Define a color palette using warm earth tones (terracotta, sage green, warm beige, soft brown) as CSS custom properties. Set clear typography hierarchy with readable font families and sizes. Apply calm, productive aesthetic with sufficient whitespace and focus on readability."
+        },
+        {
+          "path": "frontend/tailwind.config.js",
+          "operation": "modify",
+          "description": "Extend Tailwind configuration with custom color palette matching warm earth tones theme. Define custom font families for clean typography. Configure spacing and border radius values that promote a cohesive, modern design system."
+        },
+        {
+          "path": "frontend/src/components/Layout.tsx",
+          "operation": "create",
+          "description": "Create a layout component that wraps the app content and establishes consistent structure. Include header with app branding and navigation. Integrate the generated hero image at frontend/public/assets/generated/routine-hero.dim_1200x600.png in the header or hero section. Apply theme colors and typography. Provide main content area with appropriate padding and max-width."
+        },
+        {
+          "path": "frontend/src/App.tsx",
+          "operation": "modify",
+          "description": "Wrap app content with Layout component to establish consistent design structure. Organize main view to include Dashboard, RoutineList, AddRoutineForm, and AIAssistant components in a logical, user-friendly arrangement. Apply visual hierarchy that guides users through routine management workflow."
+        }
+      ]
+    }
+  ]
+}

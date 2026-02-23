@@ -1,0 +1,92 @@
+{
+  "schemaVersion": "1.0.0",
+  "projectStateVersion": 3,
+  "summary": "Daily routine tracking app with AI assistant integration",
+  "architectural_notes": [],
+  "known_issues": [],
+  "isFixRequest": false,
+  "imageRequirements": "## Required Images\n- Minimalist illustration of a morning routine checklist with warm earth tones (routine-hero.dim_1200x600.png)\n- Simple AI assistant avatar icon with friendly appearance (assistant-avatar.dim_128x128.png)",
+  "existing_features": [
+    {
+      "id": "feature-implement-frontend-ui-to-display-a-list-of-daily-routines-showing-name-scheduled-time-and-completion-status-with-the-ability-to-mark-routines-as-complete",
+      "title": "Implement frontend UI to display a list of daily routines showing name, scheduled time, and completion status with the ability to mark routines as complete",
+      "reqIds": [
+        "REQ-2"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-form-interface-to-add-new-routines-with-fields-for-routine-name-description-and-scheduled-time",
+      "title": "Create a form interface to add new routines with fields for routine name, description, and scheduled time",
+      "reqIds": [
+        "REQ-3"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-an-ai-assistant-chat-interface-where-users-can-interact-with-an-assistant-to-get-help-managing-their-routines",
+      "title": "Implement an AI assistant chat interface where users can interact with an assistant to get help managing their routines",
+      "reqIds": [
+        "REQ-4"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-add-ability-to-edit-existing-routines-including-name-description-and-scheduled-time",
+      "title": "Add ability to edit existing routines including name, description, and scheduled time",
+      "reqIds": [
+        "REQ-6"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-implement-a-dashboard-view-showing-daily-progress-statistics-such-as-completion-rate-and-streak-tracking",
+      "title": "Implement a dashboard view showing daily progress statistics such as completion rate and streak tracking",
+      "reqIds": [
+        "REQ-7"
+      ],
+      "version": 1
+    },
+    {
+      "id": "feature-create-a-modern-cohesive-visual-design-with-a-calm-and-productive-aesthetic-using-warm-earth-tones-and-clean-typography-that-promotes-focus-and-routine-building",
+      "title": "Create a modern, cohesive visual design with a calm and productive aesthetic using warm earth tones and clean typography that promotes focus and routine building",
+      "reqIds": [
+        "REQ-8"
+      ],
+      "version": 1
+    }
+  ],
+  "new_feature_requests": [
+    {
+      "id": "AR-1",
+      "summary": "Daily routine tracking functionality",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-2",
+      "summary": "Smart AI assistant integration to help with routine management",
+      "reqIds": [],
+      "status": "pending"
+    },
+    {
+      "id": "AR-3",
+      "summary": "Create a backend data model to store daily routines with fields for routine name, description, scheduled time, completion status, and timestamp",
+      "reqIds": [
+        "REQ-1"
+      ],
+      "status": "pending"
+    },
+    {
+      "id": "AR-7",
+      "summary": "Create backend logic for the AI assistant to provide intelligent suggestions and reminders about daily routines based on user's routine data",
+      "reqIds": [
+        "REQ-5"
+      ],
+      "status": "pending"
+    }
+  ],
+  "projectName": "Routine Tracker",
+  "clarification_mode": "instant",
+  "clarification_rounds": 0
+}

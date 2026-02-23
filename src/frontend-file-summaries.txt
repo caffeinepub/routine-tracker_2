@@ -1,0 +1,14 @@
+{
+  "frontend/src/App.tsx": "Main application component that sets up ThemeProvider, Layout, and organizes the dashboard, routine list, add form, and AI assistant in a responsive grid layout.",
+  "frontend/src/components/Layout.tsx": "Layout wrapper component providing consistent header with branding, hero section with generated image, main content area, and footer with attribution.",
+  "frontend/src/components/Dashboard.tsx": "Dashboard component displaying routine statistics including total routines, completed count, streak tracking, and a visual progress bar.",
+  "frontend/src/components/RoutineList.tsx": "Displays all routines in a scrollable list with checkboxes for completion, edit/delete actions, and visual distinction between completed and incomplete routines.",
+  "frontend/src/components/AddRoutineForm.tsx": "Form component for adding new routines with validation for name and scheduled time fields, plus optional description textarea.",
+  "frontend/src/components/EditRoutineForm.tsx": "Modal dialog form for editing existing routines, pre-filled with current routine data and validation.",
+  "frontend/src/components/AIAssistant.tsx": "Chat interface component for the AI assistant with message history, avatar, and input field for user interaction.",
+  "frontend/src/hooks/useRoutines.ts": "Custom React Query hook managing all routine CRUD operations (add, edit, delete, mark complete) and state synchronization.",
+  "frontend/src/hooks/useRoutineStats.ts": "Hook calculating routine statistics including total count, completion percentage, and streak from routine data.",
+  "frontend/src/hooks/useAIAssistant.ts": "Hook managing AI assistant conversation state with context-aware response generation based on user's routine data.",
+  "frontend/src/index.css": "Global styles with warm earth tone color palette (terracotta, sage green, warm beige) in OKLCH format for both light and dark modes.",
+  "frontend/tailwind.config.js": "Tailwind configuration extending the theme with custom fonts, warm earth tone colors, enhanced border radius, and custom shadows."
+}

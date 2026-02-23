@@ -1,0 +1,66 @@
+{
+  "kind": "spec_vs_diff_report",
+  "version": "1.0",
+  "generatedAt": "2026-02-22T16:04:53.640Z",
+  "summary": "The implementation successfully covers most core requirements including backend data model, frontend UI for routine management, add/edit forms, AI assistant chat interface, dashboard statistics, and warm earth tone design system. However, several acceptance criteria show partial implementation or missing functionality, particularly around advanced AI assistant capabilities and complete streak tracking.",
+  "missing_requirements": [
+    {
+      "id": "REQ-5",
+      "requirement": "Assistant can analyze user's routine patterns",
+      "reason": "The AI assistant (useAIAssistant.ts) provides only rule-based responses with basic routine statistics. It does not perform pattern analysis such as identifying best/worst performing times, routine clustering, or temporal trends.",
+      "evidence": [
+        "frontend/src/hooks/useAIAssistant.ts"
+      ]
+    },
+    {
+      "id": "REQ-5",
+      "requirement": "Assistant can suggest optimal times for routines",
+      "reason": "The AI assistant does not analyze completion data by time of day or suggest optimal scheduling. Responses are generic tips rather than data-driven time recommendations.",
+      "evidence": [
+        "frontend/src/hooks/useAIAssistant.ts"
+      ]
+    },
+    {
+      "id": "REQ-7",
+      "requirement": "Dashboard tracks consecutive days of completion",
+      "reason": "Streak tracking (useRoutineStats.ts) is a placeholder showing only 0 or 1 based on same-day completion. No historical data tracking exists to calculate true consecutive day streaks.",
+      "evidence": [
+        "frontend/src/hooks/useRoutineStats.ts"
+      ]
+    },
+    {
+      "id": "REQ-2",
+      "requirement": "Routines are sorted by scheduled time",
+      "reason": "Backend sorts routines (backend/main.mo) but frontend RoutineList.tsx receives and displays routines without explicit sorting verification. While backend implements sorting, end-to-end compliance is not evident from the diff.",
+      "evidence": [
+        "backend/main.mo",
+        "frontend/src/components/RoutineList.tsx"
+      ]
+    }
+  ],
+  "hallucinated_features": [],
+  "confidence": 0.85,
+  "changed_files": [
+    "all_files_summary.json",
+    "backend/main.mo",
+    "frontend-file-summaries.txt",
+    "frontend/index.css",
+    "frontend/index.html",
+    "frontend/src/App.tsx",
+    "frontend/src/components/AIAssistant.tsx",
+    "frontend/src/components/AddRoutineForm.tsx",
+    "frontend/src/components/Dashboard.tsx",
+    "frontend/src/components/EditRoutineForm.tsx",
+    "frontend/src/components/Layout.tsx",
+    "frontend/src/components/RoutineList.tsx",
+    "frontend/src/hooks/useAIAssistant.ts",
+    "frontend/src/hooks/useActor.ts",
+    "frontend/src/hooks/useInternetIdentity.ts",
+    "frontend/src/hooks/useRoutineStats.ts",
+    "frontend/src/hooks/useRoutines.ts",
+    "frontend/src/index.css",
+    "frontend/src/main.tsx",
+    "frontend/tailwind.config.js",
+    "project_state.json"
+  ]
+}

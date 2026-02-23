@@ -1,0 +1,120 @@
+{
+  "kind": "feature_evidence_report",
+  "features": [
+    {
+      "featureId": "feature-implement-frontend-ui-to-display-a-list-of-daily-routines-showing-name-scheduled-time-and-completion-status-with-the-ability-to-mark-routines-as-complete",
+      "featureTitle": "Implement frontend UI to display a list of daily routines showing name, scheduled time, and completion status with the ability to mark routines as complete",
+      "files": [
+        "frontend/src/components/RoutineList.tsx",
+        "frontend/src/hooks/useRoutines.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-2"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-form-interface-to-add-new-routines-with-fields-for-routine-name-description-and-scheduled-time",
+      "featureTitle": "Create a form interface to add new routines with fields for routine name, description, and scheduled time",
+      "files": [
+        "frontend/src/components/AddRoutineForm.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-3"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-an-ai-assistant-chat-interface-where-users-can-interact-with-an-assistant-to-get-help-managing-their-routines",
+      "featureTitle": "Implement an AI assistant chat interface where users can interact with an assistant to get help managing their routines",
+      "files": [
+        "frontend/src/components/AIAssistant.tsx",
+        "frontend/src/hooks/useAIAssistant.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-4"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-add-ability-to-edit-existing-routines-including-name-description-and-scheduled-time",
+      "featureTitle": "Add ability to edit existing routines including name, description, and scheduled time",
+      "files": [
+        "frontend/src/components/EditRoutineForm.tsx",
+        "frontend/src/components/RoutineList.tsx"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-6"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-implement-a-dashboard-view-showing-daily-progress-statistics-such-as-completion-rate-and-streak-tracking",
+      "featureTitle": "Implement a dashboard view showing daily progress statistics such as completion rate and streak tracking",
+      "files": [
+        "frontend/src/components/Dashboard.tsx",
+        "frontend/src/hooks/useRoutineStats.ts"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-7"
+      ],
+      "confidence": "high"
+    },
+    {
+      "featureId": "feature-create-a-modern-cohesive-visual-design-with-a-calm-and-productive-aesthetic-using-warm-earth-tones-and-clean-typography-that-promotes-focus-and-routine-building",
+      "featureTitle": "Create a modern, cohesive visual design with a calm and productive aesthetic using warm earth tones and clean typography that promotes focus and routine building",
+      "files": [
+        "frontend/src/App.tsx",
+        "frontend/src/components/Layout.tsx",
+        "frontend/src/index.css",
+        "frontend/tailwind.config.js"
+      ],
+      "components": [
+        "core-infrastructure@1.0.2",
+        "shadcn-ui@1.0.0",
+        "build-template-react@1.0.0",
+        "initial-app@1.0.0",
+        "github-export-icp-cli@1.0.0"
+      ],
+      "testIds": [
+        "REQ-8"
+      ],
+      "confidence": "high"
+    }
+  ]
+}
